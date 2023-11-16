@@ -12,7 +12,7 @@ Create an EC2 instance with Ubuntu Server (20.04+). Ubuntu Server 18.04 LTS is a
 
 ![image](https://github.com/TheNadav/Logstash-AWS-WAF/assets/105583152/cc117970-dd55-46de-b1a3-b5285c2fdb9f)
 
-3. Update the EC2 - `sudo apt update && upgrade`
+3. Update the EC2 - `sudo apt update && sudo apt upgrade`
 
 4. Install Java - `sudo apt-get install default-jre`
 
