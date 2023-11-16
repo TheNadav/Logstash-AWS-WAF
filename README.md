@@ -16,6 +16,31 @@ Create an EC2 instance with Ubuntu Server (20.04+). Ubuntu Server 18.04 LTS is a
 
 4. Install Java - `sudo apt-get install default-jre`
 
+5. Create IAM role for the EC2 with the following settings 
+-Trusted entity type - AWS service
+-Use case > Service or use case > EC2
+
+Assigne AmazonS3ReadOnlyAccess policy and set the logs bucket ARN at the `"Resource":` parameter.
+
+6. Set the bucket policy-
+`{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "[EC2-Role-ARN]"
+      },
+      "Action": "s3:GetObject", "s3:ListBucket", "s3:DescribeBucket",
+      "Resource": "arn:aws:s3:::[my bucket name]",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "[ec2_ARN]"
+        }
+      }
+    }
+  ]
+}`
+
 
 # Installing Logstash APT
 
