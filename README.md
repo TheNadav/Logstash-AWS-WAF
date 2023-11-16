@@ -78,3 +78,7 @@ Logstash configurations and settings will be located at `/etc/logstash/`
 3. Start ship logs -
 `sudo nohup bin/logstash --path.settings /etc/logstash >/dev/null 2>&1 &`
 
+# Logstash Doc (Recommended!)
+
+https://www.elastic.co/guide/en/logstash/current/getting-started-with-logstash.html
+
