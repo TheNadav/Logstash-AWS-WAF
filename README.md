@@ -70,10 +70,10 @@ Logstash configurations and settings will be located at `/etc/logstash/`
 1. Create a new config file `sudo vim /etc/logstash/conf.d/logstash.conf` 
 
 2. Use the <file> and edit the following parameters -
-`bucket => "aws-waf-logs-{bucketname}"`
-`workspace_id => "{WorkspaceID}"
- workspace_key => "{WorkspaceKey}"
- custom_log_table_name => "{TableName}"`
-``
+* `bucket => "aws-waf-logs-{bucketname}"`
+* `workspace_id => "{WorkspaceID}"`
+* `workspace_key => "{WorkspaceKey}"`
+* `custom_log_table_name => "{TableName}"`
+
 3. Start ship logs -
 `sudo nohup bin/logstash --path.settings /etc/logstash >/dev/null 2>&1 &`
