@@ -61,7 +61,7 @@ Logstash configurations and settings will be located at `/etc/logstash/`
 `bin/logstash-plugin install microsoft-logstash-output-azure-loganalytics`
 
 5. Disable `pipeline.ecs_compatibility` at `/etc/logstash/logstash.yml`
-6. 
+
 ![image](https://github.com/TheNadav/Logstash-AWS-WAF/assets/105583152/b4cbdcee-7419-4de9-9114-791c88cae236)
 
 
