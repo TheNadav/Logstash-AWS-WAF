@@ -14,6 +14,9 @@ Create an EC2 instance with Ubuntu Server (20.04+). Ubuntu Server 18.04 LTS is a
 
 3. Update the EC2 - `sudo apt update && upgrade`
 
+4. Install Java - `sudo apt-get install default-jre`
+
+
 # Installing Logstash APT
 1. Download and install the Public Signing Key:
 `wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic-keyring.gpg`
@@ -23,3 +26,16 @@ Create an EC2 instance with Ubuntu Server (20.04+). Ubuntu Server 18.04 LTS is a
 
 3. Run `sudo apt-get update` and the repository is ready for use. You can install it with:
 `sudo apt-get update && sudo apt-get install logstash`
+Logstash binary will be located at `/usr/share/logstash/`
+Logstash configurations and settings will be located at `/etc/logstash/`
+
+4. Install the Microsoft Log Analytics logstash output plugin
+`bin/logstash-plugin install microsoft-logstash-output-azure-loganalytics`
+
+5. Disable `pipeline.ecs_compatibility` at `/etc/logstash/logstash.yml`
+![image](https://github.com/TheNadav/Logstash-AWS-WAF/assets/105583152/b4cbdcee-7419-4de9-9114-791c88cae236)
+
+
+# Config File 
+1. Create new config file `sudo vim /etc/logstash/conf.d/logstash.conf` 
+2. Use the <file> and edit the following fileds
