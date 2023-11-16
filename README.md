@@ -23,7 +23,7 @@ Create an EC2 instance with Ubuntu Server (20.04+). Ubuntu Server 18.04 LTS is a
 Assigne AmazonS3ReadOnlyAccess policy and set the logs bucket ARN at the `"Resource":` parameter.
 
 6. Set the bucket policy-
-`{
+``{
   "Statement": [
     {
       "Effect": "Allow",
@@ -39,7 +39,7 @@ Assigne AmazonS3ReadOnlyAccess policy and set the logs bucket ARN at the `"Resou
       }
     }
   ]
-}`
+}``
 
 
 # Installing Logstash APT
