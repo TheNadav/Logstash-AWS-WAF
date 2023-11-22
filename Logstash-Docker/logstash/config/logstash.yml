@@ -1,0 +1,3 @@
+node.name: logstash_waf
+api.environment: dev
+pipeline.ecs_compatibility: disabled
